@@ -3,6 +3,11 @@ import { getCollection, render } from 'astro:content';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 
 export async function getStaticPaths() {
+---
+import { getCollection, render } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+export async function getStaticPaths() {
   const posts = await getCollection('blog');
   return posts.map(post => ({
     params: { id: post.id },
@@ -21,12 +26,10 @@ const { Content } = await render(post);
     <div style="padding: 0 1.75rem;">
       <article style="margin-top: 1rem; margin-bottom: 3.5rem;">
         
-        <!-- Header -->
         <header style="margin-bottom: 2rem; border-bottom: 2px solid #111111; padding-bottom: 0.75rem; display: block;">
           <div style="display: flex; justify-content: space-between; align-items: center; width: 100%; margin-bottom: 0.75rem;">
-          <a href={import.meta.env.BASE_URL} style="font-family: var(--font-mono); font-size: 0.72rem; color: var(--muted); text-decoration: none; text-transform: uppercase; letter-spacing: 0.05em; display: inline-block;">
-            &#8629; TRANSMISSIONS
-          </a>
+            <a href={import.meta.env.BASE_URL} style="font-family: var(--font-mono); font-size: 0.72rem; color: var(--muted); text-decoration: none; text-transform: uppercase; letter-spacing: 0.05em; display: inline-block;">
+              &#8629; TRANSMISSIONS
             </a>
             <time style="font-family: var(--font-mono); font-size: 0.78rem; color: var(--muted); display: inline-block;">
               {post.data.date.toISOString().split('T')[0]}
@@ -44,7 +47,6 @@ const { Content } = await render(post);
           )}
         </header>
 
-        <!-- Post Body -->
         <div class="post-content">
           <Content />
         </div>
@@ -57,7 +59,6 @@ const { Content } = await render(post);
 </BaseLayout>
 
 <style is:global>
-  /* Base Body Text - Matched to Description Style */
   .post-content {
     font-family: var(--font-mono);
     font-size: 0.85rem;
@@ -69,7 +70,6 @@ const { Content } = await render(post);
     margin-bottom: 1.25rem;
   }
 
-  /* Monospace Headings with Section Dividers */
   .post-content h2 {
     font-family: var(--font-mono);
     font-size: 0.82rem;
@@ -94,7 +94,6 @@ const { Content } = await render(post);
     margin-bottom: 0.5rem;
   }
 
-  /* Lists in Monospace */
   .post-content ul, .post-content ol {
     margin-bottom: 1.25rem;
     padding-left: 1.25rem;
@@ -110,7 +109,6 @@ const { Content } = await render(post);
     font-weight: 700;
   }
 
-  /* Minimal Blockquotes */
   .post-content blockquote {
     margin: 1.25rem 0;
     padding: 0.4rem 0 0.4rem 0.85rem;
@@ -121,7 +119,6 @@ const { Content } = await render(post);
     background: #fcfcfc;
   }
 
-  /* Inline Code Spans */
   .post-content :not(pre) > code {
     font-family: var(--font-mono);
     font-size: 0.78rem;
@@ -132,7 +129,6 @@ const { Content } = await render(post);
     border-radius: 2px;
   }
 
-  /* Code Blocks */
   .post-content pre {
     padding: 1rem 1.25rem;
     border: 1px solid #111111;
