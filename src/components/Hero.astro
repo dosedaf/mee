@@ -1,0 +1,76 @@
+---
+const { 
+  bgImage = "/images/realrim.jpg",
+  posX = "center",
+  posY = "center",
+  desc = "SOFTWARE ARCHITECT / LOW-LEVEL DEV"
+} = Astro.props;
+---
+
+<div class="hero-wrapper">
+  <img 
+    src={bgImage} 
+    alt="Hero background" 
+    class="hero-img" 
+    style={`object-position: ${posX} ${posY};`}
+  />
+
+  <div class="hero-overlay">
+    <span class="username">DOSEDAF</span>
+    {desc && <span class="hero-desc">{desc}</span>}
+  </div>
+</div>
+
+<style>
+  .hero-wrapper {
+    position: relative;
+    width: 780px;
+    max-width: 100%;
+    margin: 0 auto 1.25rem auto;
+    height: 340px;
+    overflow: hidden;
+    background-color: #111111;
+    display: block;
+  }
+
+  .hero-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+
+  .hero-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 1.25rem;
+    box-sizing: border-box;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0) 100%);
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+  }
+
+  .username {
+    font-family: var(--font-mono, monospace);
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #ffffff;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    display: block;
+    line-height: 1;
+  }
+
+  .hero-desc {
+    font-family: var(--font-mono, monospace);
+    font-size: 0.72rem;
+    color: #cccccc;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    display: block;
+  }
+</style>

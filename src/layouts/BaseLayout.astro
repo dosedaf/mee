@@ -1,0 +1,28 @@
+---
+import '../styles/global.css';
+const { title = "DOSEDAF" } = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{title}</title>
+  </head>
+  <body>
+    <!-- Fixed status header bar -->
+    <header style="max-width: 780px; margin: 0 auto; padding: 1.25rem 1.75rem 0.5rem 1.75rem; display: flex; justify-content: flex-end;">
+      <div class="status-badge" style="color: #00aa44; font-family: var(--font-mono); font-size: 0.78rem; font-weight: 600;">
+        ● WIRED
+      </div>
+    </header>
+
+    <slot />
+
+    <footer style="max-width: 780px; margin: 3rem auto 2rem auto; padding: 1rem 1.75rem 0 1.75rem; border-top: 1px solid var(--border); display: flex; justify-content: space-between; font-family: var(--font-mono); font-size: 0.75rem; color: var(--muted);">
+      <p>&copy; {new Date().getFullYear()} — DOSEDAF</p>
+      <p>LOC: LOCAL</p>
+    </footer>
+  </body>
+</html>
