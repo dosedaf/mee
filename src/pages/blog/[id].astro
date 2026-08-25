@@ -21,7 +21,8 @@ const { Content } = await render(post);
     <div style="padding: 0 1.75rem;">
       <article style="margin-top: 1rem; margin-bottom: 3.5rem;">
         
-        <header style="margin-bottom: 2rem; border-bottom: 2px solid #111111; padding-bottom: 0.75rem; display: block;">
+        <!-- Header -->
+        <header style="margin-bottom: 1.5rem; border-bottom: 2px solid #111111; padding-bottom: 0.75rem; display: block;">
           <div style="display: flex; justify-content: space-between; align-items: center; width: 100%; margin-bottom: 0.75rem;">
             <a href={import.meta.env.BASE_URL} style="font-family: var(--font-mono); font-size: 0.72rem; color: var(--muted); text-decoration: none; text-transform: uppercase; letter-spacing: 0.05em; display: inline-block;">
               &#8629; TRANSMISSIONS
@@ -42,6 +43,18 @@ const { Content } = await render(post);
           )}
         </header>
 
+        <!-- Banner Image -->
+        {post.data.banner && (
+          <div style="margin-bottom: 1.75rem;">
+            <img 
+              src={post.data.banner.replace('../../../public', import.meta.env.BASE_URL)} 
+              alt={post.data.title} 
+              style="width: 100%; max-height: 380px; object-fit: cover; border: 1px solid #111111; display: block;"
+            />
+          </div>
+        )}
+
+        <!-- Post Body -->
         <div class="post-content">
           <Content />
         </div>

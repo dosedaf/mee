@@ -14,4 +14,4 @@ description: "muntahan gw waktu bangun Tilik, bisa reasoning, bisa kemumetan, bi
 
 ### 25 aug
 #### ai selalu muntahin semua pengetahuan yg dia punya tanpa peduli mental state lu. LOL
- * ai overstimulates me bruh. terlalu banyak hal yang lu sendiri blm ketemu scr problem tpi jadi kedistraksi karna di mention ama AI. ga blg kalo ini jelek sih, jadi sedikit pinpoint kurangnya teori entah kurang komprehensif atau sesimpel ga dapet big picture nya. CONSUME MORE THEORY? (python etl, read this)[https://www.freecodecamp.org/news/the-etl-pipeline-handbook-how-to-build-a-production-grade-pipeline-in-python/]
+ * ai overstimulates me bruh. terlalu banyak hal yang lu sendiri blm ketemu scr problem tpi jadi kedistraksi karna di mention ama AI. ga blg kalo ini jelek sih, jadi sedikit pinpoint kurangnya teori entah kurang komprehensif atau sesimpel ga dapet big picture nya. CONSUME MORE THEORY? [python etl, read this](https://www.freecodecamp.org/news/the-etl-pipeline-handbook-how-to-build-a-production-grade-pipeline-in-python/)
