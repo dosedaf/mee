@@ -1,7 +1,7 @@
 ---
 title: "yappari: Tilik"
 date: 2026-08-24
-banner: "../../../public/images/factorio.jpg"
+banner: "../../../public/images/ds1.jpg"
 description: "muntahan gw waktu bangun Tilik, bisa reasoning, bisa kemumetan, bisa kekaguman dll"
 ---
 
@@ -15,3 +15,7 @@ description: "muntahan gw waktu bangun Tilik, bisa reasoning, bisa kemumetan, bi
 ### 25 aug
 #### ai selalu muntahin semua pengetahuan yg dia punya tanpa peduli mental state lu. LOL
  * ai overstimulates me bruh. terlalu banyak hal yang lu sendiri blm ketemu scr problem tpi jadi kedistraksi karna di mention ama AI. ga blg kalo ini jelek sih, jadi sedikit pinpoint kurangnya teori entah kurang komprehensif atau sesimpel ga dapet big picture nya. CONSUME MORE THEORY? [python etl, read this](https://www.freecodecamp.org/news/the-etl-pipeline-handbook-how-to-build-a-production-grade-pipeline-in-python/)
+### 26 aug
+#### batch processing enaknya gimana?
+-better raw csv  ingest taruh mana? terus enaknya load buat etl nya gimana?
+-opsi 1, ga sentuh ingestion, load tiap pemda, load tiap year, filename dijadiin target dir aja. misal tender_wonogiri_2025 brati wonogirikab/2025/tender_wonogiri_2025
